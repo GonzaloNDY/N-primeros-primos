@@ -35,8 +35,8 @@ void imprimirNPrimos(int cantidad){
             flag = 1;
             primo++;
 
-            for (int i = 2; i * i <= primo; i++){
-                if (primo % i == 0)
+            for (int i = 2; i * i <= primo; i++){   // En lugar de verificar todos los números hasta [numero], solo necesitamos verificar hasta la raíz cuadrada de [numero]
+                if (primo % i == 0)                 // esto reduce significativamente el número de iteraciones, especialmente para números grandes.
                     flag = 0;
             }
         } while (flag == 0);
