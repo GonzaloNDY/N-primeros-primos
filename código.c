@@ -24,8 +24,6 @@ int solicitarCantidad(){
     return numero;
 }
 
-    
-
 void imprimirNPrimos(int cantidad){
     static int primo = 1;
     int flag;
