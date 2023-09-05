@@ -7,6 +7,23 @@
 int solicitarCantidad();
 void imprimirNPrimos(int cantidad);
 
+int solicitarCantidad(){
+    char num[MAX];
+    int numero;
+
+    scanf("%i", &numero);
+    do {
+        fgets(num, MAX, stdin);
+        num[strlen(num) - 1] = '\0';
+        if (!strspn(num, "1234567890"))
+            printf("El valor ingresado debe ser un número positivo, intente nuevamente: ");
+    } while (!strspn(num, "1234567890"));
+
+    numero = atoi(num);
+
+    return numero;
+}
+
 void imprimirNPrimos(int cantidad){
     static int primo = 1;
     int flag;
